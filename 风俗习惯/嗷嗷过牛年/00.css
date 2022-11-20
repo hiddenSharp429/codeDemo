@@ -1,0 +1,182 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.title{
+    margin-top: 0px;
+    width: 100%;
+    height: 550px;
+    background-image: url(../嗷嗷过牛年/images/微信图片编辑_20220122131003.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-attachment: fixed;
+}
+.title h1{
+    width: 100%;
+    padding:140px 40px 0px 350px ;
+    color:#faf9f9;
+    font-size: 100px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 7px 7px black;
+}
+.title p{
+    width: 100%;
+    padding: 6px 40px 0px 560px;
+    color:#faf9f9;
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px black;
+}
+
+.xh{
+    left: 100px;
+    top: 100px;
+    position: absolute;
+    color: white;
+    opacity: 0.7;
+    font-size: 67px;
+}
+canvas{
+    filter: blur(1px);
+}
+.content{
+    position: absolute;
+    left: 100px;
+    top: 450px;
+    height: 100px;
+    background-color: #fff;
+    opacity: 0.8;
+}
+.content button{
+    border: none;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 46px;
+    color: #ef475d;
+    padding: 20px 160px 20px 160px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.content a{
+    text-decoration: none;
+    color: red;
+}
+.bt{
+    background-color: #ef475d;
+    text-decoration: none;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+.bt button{
+    padding: 12px 35px;
+    color: black;
+    border: none;
+    background-color: #ef475d;
+    font-size: 22px;
+    text-align: center;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.bt button:hover{
+    background-color: white;
+    color: black;
+}
+.bt a{
+    text-decoration: none;
+    color: black;
+}
+.bt a:hover{
+    color: black;
+}
+.text-left{
+    position:absolute;
+    top: 660px;
+    left: 167px;
+    width: 537px;
+}
+.text-left h3{
+    border-left: 3px solid tomato;
+    padding-left: 7px;
+    color: tomato;
+}
+.text-right{
+    position: absolute;
+    top: 780px;
+    left: 767px;
+    width: 555px;
+}
+.box-right{
+    position: absolute;
+    top: 660px;
+    left: 767px;
+    width: 555px;
+}
+.box-right h3{
+    border-left: 3px solid tomato;
+    padding-left: 7px;
+    color: tomato;
+}
+.box-right card{
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background-color: white;
+    margin: 30px 15px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px 200px rgba(0, 0, 0, 5);
+    transition: 0.3s ease-in-out;
+}
+.box-right .card:hover{
+    height: 420px;
+}
+.box-right .card .img-box{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border-radius: 5px;
+    overflow: hidden;
+    top: -60px;
+    left: 20px;
+}
+.box-right .card .img-box img{
+    width: 100%;
+    height: 100%;
+}
+.box-right .card .wz-box{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.box-right .card .wz-box p{
+    text-align: left;
+    line-height: 25px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #555;
+}
+.box-right .card .wz-box h4{
+    text-align: left;
+    padding-left: 27px;
+}
+.box-right .card:hover .wz-box{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.2s;
+}
+a:-webkit-any-link{
+    text-decoration: none;
+}

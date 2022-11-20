@@ -1,0 +1,271 @@
+.container{
+    /* 投影效果 */
+    -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(0,0,0,0.2));
+    margin-top: 50px;
+}
+.lighten{
+    color: #fff;
+    font-size: 96px;
+    /* 字间距 */
+    letter-spacing: 15px;
+    /* 转大写 */
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 76px;
+    outline: none;
+    /* 自定义属性--c，可通过var函数对其调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c，设置文字阴影（发光效果） */
+    text-shadow: 0 0 10px var(--c),
+    0 0 20px var(--c),
+    0 0 40px var(--c),
+    0 0 80px var(--c),
+    0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次播放 */
+    animation: animate 5s linear infinite;
+}
+
+/* 定义动画 */
+@keyframes animate {
+    to{
+        /* 色相旋转滤镜（设置度数可改变颜色） */
+        filter: hue-rotate(360deg);
+    }
+}
+body{
+    min-height: 200vh;
+    position: relative;
+    background: url(2022.jpg) no-repeat top/100% ;
+    background-color: red;
+    width: 100%;
+    height: 100vh;
+}
+ul{
+    list-style: none;
+    border-radius: 0 15px 15px 0;
+}
+nav{
+    /* 固定定位 */
+    position: fixed;
+    width: 300px;
+    height: 650px;
+    background-color: rgb(164, 34, 56);
+    border-radius: 0 15px 15px 0;
+}
+.menus{
+    margin: 50px 0;
+    color: #fff;
+}
+.li{
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 16px 0;
+    /* 动画过渡 */
+    transition: 0.3s;
+}
+.sy{
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 16px 0;
+    /* 动画过渡 */
+    /* transition: 0.3s; */
+}
+.menus li:hover{
+    background-color: #d2a6c6;
+}
+.li .fa{
+    font-size: 20px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    margin-left: 5px;
+}
+.li ul{
+    width: 0;
+    height: 550px;
+    padding: 50px 0;
+    background-color: #a06993;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.li ul li{
+    padding: 16px 24px;
+    /* 文字禁止换行 */
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.li:hover ul{
+    width: 250px;
+}
+.li ul li:hover{
+    background-color: #c28fb4;
+}
+.xuanzhuan{
+        width:200px;
+        height:200px;
+        background:red;
+        position:relative;        
+        animation: rotating 5s linear infinite;
+        margin-left: 45px; 
+        margin-top: 150px;
+}
+@keyframes rotating{
+    to{
+        transform: rotate(1turn);
+        }
+        
+} 
+.card{
+    /* 相对定位 */
+    position: relative;
+    width: 300px;
+    height: 450px;
+    margin-top: 50px;
+    margin-left: 70px;
+    
+
+    background-color: #758a99;
+    border-radius: 20px;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 弹性布局 */
+    display: flex;
+    /* 元素纵向排列 */
+    flex-direction: column;
+    /* 居中 */
+    align-items: center;
+    color: #fff;
+    /* 阴影 */
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    /* 不让其被挤压 */
+    flex-shrink: 0;
+    
+}
+.card .photo img{
+    width: 100%;
+    height: 100%;
+    /* 保持原有尺寸比例，裁切长边 */
+    object-fit: cover;
+}
+/* 默认大图 */
+.card .photo{
+    /* 绝对定位 */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    overflow: hidden;
+    /* 动画过渡 */
+    transition: 0.5s;
+}
+/* 鼠标移入变小图 */
+.card:hover .photo{
+    top: 30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(248, 32, 66);
+}
+/* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
+.card .photo::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,transparent 50%,#222);
+}
+.card h1{
+    position: absolute;
+    top: 370px;
+    transition: 0.5s;
+}
+.card:hover h1{
+    top: 170px;
+}
+.card h2{
+    margin-top: 220px;
+    width: 80%;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.card p{
+    width: 90%;
+    text-indent: 32px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+.card a{
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 8px 32px;
+    border-radius: 8px;
+}
+.card a:hover{
+    color: #fff;
+    background-color: rgb(248, 32, 66);
+}
+
+.widen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+}
+.firstk{
+    margin-left: 220px;
+    margin-top: 50px;
+    padding: 0;
+
+}
+.firstk h2{
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #fff;
+
+    
+}
+.banner1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../VSs/2022.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+.banner2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../VSs/2022.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+/* <section class="banner1"></section>
+    <section class="banner2"></section> */
+
+.kong{
+    text-decoration: none;
+    color: #fff;
+}
